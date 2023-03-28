@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        h2{
+            margin-top: 20px;
+        }
+      body {
+        text-align: center;
+      
+      }
+      #input {
+        width: 300px;
+        padding: 10px;
+        border: 2px solid aquamarine;
+        font-size: 20px;
+        margin-top: 200px;
+      }
+      #output {
+        font-size: 23px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Exercise: AdvanceJS-401-01</h2>
+    <input type="text" id="input" placeholder="Enter here" />
+    <p id="output"></p>
+
+    <script>
+      const res = (ele) => {
+        const text = document.getElementById("output");
+        const value = ele.target.value;
+        text.innerHTML = value;
+      };
+      document.getElementById("input").addEventListener("input", res);
+    </script>
+  </body>
+</html>
