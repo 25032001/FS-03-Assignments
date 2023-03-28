@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+  <body>
+    <main>
+      <form>
+        <label>Name:</label>
+        <input type="text" id="forname" placeholder="Enter Your Name"/>
+
+        <label>Gender:</label>
+        <input type="text" id="forgender" placeholder="Enter Your Gender"/>
+        <br />
+        <button type="submit" id="sub">Submit</button>
+      </form>
+
+
+
+      <div class="radiobtn">
+        <label>Male</label>
+        <input
+          type="radio"
+          id="maleGender"
+          name="gender"
+          value="male"
+        />
+        <label>Female</label>
+        <input
+          type="radio"
+          id="femaleGender"
+          name="gender"
+          value="female"
+        />
+      </div>
+
+      <div id="storeData"></div>
+    </main>
+
+    <script>
+      let form = document.querySelector("form");
+      let nameRef = document.querySelector("#forname");
+      let genderRef = document.querySelector("#forgender");
+      let storeDataRef = document.querySelector("#storeData");
+      let maleRef = document.querySelector("#maleGender");
+      let femaleRef = document.querySelector("#femaleGender");
+      let elements = [];
+
+      function createElement(name, gender) {
+        let element = document.createElement("div");
+        element.innerHTML = `${name} (${gender})`;
+        let deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.addEventListener("click", () => {
+          element.remove();
+          elements = elements.filter((el) => el !== element);
+        });
+        element.appendChild(deleteButton);
+        storeData.appendChild(element);
+        elements.push(element);
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        let name = nameRef.value;
+        let gender = genderRef.value;
+        createElement(name, gender);
+      });
+      function filterElements() {
+        let selectedValue = document.querySelector(
+          'input[name="gender"]:checked'
+        )?.value;
+        elements.forEach((el) => {
+          if (selectedValue && !el.textContent.includes(selectedValue)) {
+            el.style.display = "none";
+          } else {
+            el.style.display = "block";
+          }
+        });
+      }
+      maleRef.addEventListener("change", filterElements);
+      femaleRef.addEventListener("change", filterElements);
+    </script>
+  </body>
+</html>
