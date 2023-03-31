@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+    color: white;
+  }
+  .container h1,
+  #search-bar {
+    text-align: center;
+  }
+  #search-form input{
+  padding: 8px;
+  font-size: 17px;
+  }
+  #search-field{
+    width: 130px;
+  }
+  .btn{
+    cursor: pointer;
+    width: 100px;
+  }
+  .btn:hover{
+    background-color: whitesmoke;
+  }
+  .container hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #search-bar input {
+    padding: 8px;
+    width: 400px;
+    font-size: 16px;
+  }
+  #emoji-table {
+    margin: 50px auto;
+    margin-left: 470px;
+  }
+  .submitbtn {
+    width: 100px !important;
+  }
+  .submitbtn:hover {
+    background-color: rgb(108, 171, 231);
+    color: white;
+    width: 100px !important;
+    cursor: pointer;
+  } 
