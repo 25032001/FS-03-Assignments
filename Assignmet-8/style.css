@@ -1,0 +1,67 @@
+body {
+  width: 50%;
+}
+#info_input {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin-top: 20px;
+}
+#info_input input {
+  text-align: center;
+  padding: 10px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#BtnSubmit {
+  background: rgb(99, 225, 128);
+  border: none;
+  padding: 10px 20px;
+  width: 130px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+.BtnSubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#BtnSubmit:hover {
+  background-color: rgb(74, 180, 92);
+}
+#Genderinput {
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 50px;
+}
+#result_div {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: black;
+  margin: auto;
+  margin-top: 30px;
+  font-size: 17px;
+}
+#result_div button {
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  border-radius: 50%;
+  border-color: white;
+  background-color: black;
+  color: white;
+  margin-left: 15px;
+}
+#result_div button:hover {
+  background-color: green;
+
+}
+
