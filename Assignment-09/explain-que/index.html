@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button>Click Me!</button>
+      <a href="index/home">Home</a>
+    </div>
+
+    <script>
+      var div = document.querySelector("div");
+      var button = document.querySelector("button");
+      var a = document.querySelector("a");
+
+  
+
+      /*1)=> EventBubbling
+       In bubbling, when an event happens, the handler of the innermost element
+        runs, then the parents, and then the further ancestor elements. In other 
+        words, events bubble up or propagate the DOM tree upwards.*/
+
+      //code:-
+
+      // div.addEventListener("click",()=>{
+      //   console.log("div");
+      // })
+
+      // button.addEventListener("click",()=>{
+      //   console.log("button");
+      // })
+      /*So bubbling is propogate child to parent element.  By Defalt is value is False*/
+
+
+
+      /*2)=>Event Capturing
+          A similar principle to event bubbling is event capturing, where events propagate
+          inwards instead of outwards.*/
+
+      //code:-
+
+      // div.addEventListener("click",()=>{
+      //   console.log("div");
+      // },true)                 /*.....Added parameter value true*/
+
+      // button.addEventListener("click",()=>{
+      //   console.log("button");
+      // },true)
+
+      /*So capturing is propogate parent to child element.*/
+
+
+
+
+      /*3)=>Stop propagation*/
+      /* so, don't want output like this..i want to print only div so I add stoppropagation
+      on div code so its stop propagating.
+
+      //code:-
+
+      div.addEventListener(
+        "click",
+        (event) => {
+          event.stopPropagation();
+          console.log("div");
+        },
+        true
+      );
+
+      button.addEventListener(
+        "click",
+        (event) => {
+          console.log("button");
+        },
+        true
+      );
+
+      /*4)=>stopImmediatePropagation*/
+      /*so here I take 3 button and I want output is only print 2 buttons so, 
+I add stopImmediatePropagation on 2nd button so, after the 2nd button code 
+is cant run and its stop imidiatly on 2nd button */
+
+      //code:-
+
+      // button.addEventListener("click",(event)=>{
+
+      //   console.log("button-1");
+      // })
+
+      // button.addEventListener("click",(event)=>{
+      //   event.stopImmediatePropagation();
+      //   console.log("button-2");
+      // })
+
+      // button.addEventListener("click",(event)=>{
+      //   console.log("button-3");
+      // })
+
+        /*5)=> preventDefault
+         now I add anchor tag and take reference of that So, the a tag 
+         redirect the new webpage ..If i dont wnt that redirect new page
+         I want to stop this so i use preventDefault*/
+
+         //code:-
+
+      //     a.addEventListener("click",(event)=>{
+      //       event.preventDefault();
+      //  console.log("a");
+      //  })
+    </script>
+  </body>
+</html>
