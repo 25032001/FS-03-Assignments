@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Assignment-17</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <h4>
+      1-A :Write a JavaScript program that uses the browser object model to
+      display the current URL of the document and the size of the window in
+      pixels.
+    </h4>
+    <div id="url"></div>
+    <div id="size"></div>
+    <h4>
+     2-B: Explain the difference between the location and history objects in the
+      browser object model. Give an example scenario where the location object
+      would be used and another scenario where the history object would be used.
+    </h4>
+    <p>
+      Differece Between location and history object: <br />
+      Locarion Object: The location property of a window is a reference to a
+      Location object, which is a representation of the URL of the document
+      currently being displayed in that window. The href property of the
+      Location object is a string that contains the complete text of the URL.
+      Other properties of this object, such as protocol, host, pathname, and
+      search specify the various individual parts of the URL.<br />
+      <br />
+      History Object: The history property of the Window object refers to a
+      History object for the window. The History object is an array of the URLs
+      in the browsing history of the window or frame. For a top-level Navigator
+      window, the History object is a representation of the contents of the
+      browser's Go menu. A user's browsing session history is private
+      information and, so for security reasons, there are heavy restrictions on
+      how the History object <br />
+      can be used.
+      <br />
+      The Location object specifies the URL currently being displayed, and
+      allows JavaScript code to load new URLs.<br />
+      The History object contains information about the URLs that have been
+      previously displayed in the window
+    </p>
+    <p id="locationexample"></p>
+    <p id="HistoryExample"></p>
+
+    <div id="question2">
+        <h4>2-A::Write a JavaScript program that uses the screen object to display 
+            the width and height of the screen in pixels, as well as the color
+             depth of the screen.</h4>
+        <p id="display"></p> 
+        <h4> 2-B :Explain the purpose of the navigator object in the browser object
+             model. Give an example scenario where the navigator object would be
+              used to detect the user's browser and operating system.</h4> 
+         <p id="que2b"> </p> 
+        <div>
+    <script src="script.js"></script>
+
+</body>
+</html>
